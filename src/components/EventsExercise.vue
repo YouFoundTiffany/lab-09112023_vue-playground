@@ -26,7 +26,7 @@
             "greeting" property and pass its value into an alert().
           </p>
           <!-- add event listener to the button element -->
-          <button class="btn btn-primary m-2">Greet</button>
+          <button @click="state.counter += 1" class="btn btn-primary m-2">Greet</button>
         </div>
       </div>
     </div>
@@ -47,6 +47,9 @@ export default {
     });
     return {
       state,
+      greet() {
+        alert(state.greeting)
+      }
       // Add your methods here
     };
   },
@@ -55,5 +58,4 @@ export default {
 </script>
 
 
-<style scoped>
-</style>
+<style scoped></style>
